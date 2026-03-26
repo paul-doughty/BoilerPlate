@@ -1,5 +1,7 @@
 # SDL BoilerPlate
 
+[![Build](https://github.com/paul-doughty/BoilerPlate/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/paul-doughty/BoilerPlate/actions/workflows/build.yml)
+
 A minimal SDL2 starter project with a simple hello world window example.
 
 ## Requirements

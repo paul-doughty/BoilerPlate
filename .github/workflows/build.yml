@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  linux-make-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install SDL2 development package
+        run: sudo apt-get update && sudo apt-get install -y libsdl2-dev
+
+      - name: Build with make
+        run: make clean && make
+
+      - name: Verify binary exists
+        run: test -x ./build/hello_sdl
